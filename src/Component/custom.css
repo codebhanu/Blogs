@@ -1,0 +1,57 @@
+/* src/custom.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.custom-size {
+  @apply w-[32px] h-[32px] text-[32px] leading-none;
+}
+
+.custom-bg {
+  @apply bg-blue-500 text-white rounded p-4;
+}
+.aCssInLinkInHomePage{
+    @apply  flex items-center bg-blue-500 hover:bg-sky-700 text-white rounded p-2 
+}
+.imageSizeCssInHomePage{
+    @apply w-[30px] h-[30px] mr-2
+
+}
+.nameSizeCssInHomePage{
+    @apply text-[30px]
+
+}
+
+@keyframes slideInCenterFast {
+    0% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .name-animation {
+    animation: slideInCenterFast 0.5s ease-out forwards;
+  }
+  
+  .link-animation {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: var(--delay, 0.5s);
+    opacity: 0;
+  }

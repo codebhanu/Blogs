@@ -1,9 +1,8 @@
 // src/InteractiveBackground.js
-import React, { useRef,useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Line, Sphere } from '@react-three/drei';
 import { Vector3 } from 'three';
-
 
 import Gmail from '/Users/bhanudahal/blog/blogben/src/icons/Gmail.svg';
 import Linkd from '/Users/bhanudahal/blog/blogben/src/icons/Linkd.svg';
@@ -11,7 +10,7 @@ import Github from '/Users/bhanudahal/blog/blogben/src/icons/Github.svg';
 import Twitter from '/Users/bhanudahal/blog/blogben/src/icons/Twitter.svg';
 import Insta from '/Users/bhanudahal/blog/blogben/src/icons/Insta.svg';
 import Youtube from '/Users/bhanudahal/blog/blogben/src/icons/Youtube.svg';
-import scroll from '/Users/bhanudahal/blog/blogben/src/icons/scroll.svg'
+import scroll from '/Users/bhanudahal/blog/blogben/src/icons/scroll.svg';
 
 const numDots = 150;
 const maxDistance = 1.4;
@@ -81,54 +80,70 @@ function Scene() {
       <Lines connections={connections} electricFlow={electricFlow} />
     </>
   );
-
 }
 
-function InteractiveBackground() {
+function InteractiveBackground({ scrollContainerRef }) {
   const [loaded, setLoaded] = useState(false);
+  const [showScrollImage, setShowScrollImage] = useState(true);
 
   useEffect(() => {
     setLoaded(true);
-  }, []);
+
+    const handleScroll = () => {
+      if (scrollContainerRef.current.scrollTop > 0) {
+        setShowScrollImage(false);
+      } else {
+        setShowScrollImage(true);
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    container.addEventListener('scroll', handleScroll);
+
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollContainerRef]);
+
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white">
       <Canvas className="absolute inset-0">
-        <Scene  />
+        <Scene />
       </Canvas>
-      <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black">
         <div className={`text-9xl mb-8 ${loaded ? 'name-animation' : ''}`}>Ben D</div>
         <div className="flex gap-4">
-          <a href="https://youtube.com"  className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`} >
-            <img src={Youtube} alt="YouTube"  className="imageSizeCssInHomePage" />
+          <a href="https://youtube.com" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
+            <img src={Youtube} alt="YouTube" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">YouTube</span>
           </a>
-          <a href="https://www.instagram.com/bhanu_dahal007/" className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`}>
-            <img src={Insta} alt="Instagram"   className="imageSizeCssInHomePage"/>
+          <a href="https://www.instagram.com/bhanu_dahal007/" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
+            <img src={Insta} alt="Instagram" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">Instagram</span>
           </a>
-          <a href="https://twitter.com/BhanuDahal7" className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`}>
+          <a href="https://twitter.com/BhanuDahal7" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
             <img src={Twitter} alt="Twitter" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">Twitter</span>
           </a>
-          <a href="https://github.com/codebhanu"  className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`}>
+          <a href="https://github.com/codebhanu" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
             <img src={Github} alt="GitHub" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/ben0/"  className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`}>
+          <a href="https://www.linkedin.com/in/ben0/" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
             <img src={Linkd} alt="LinkedIn" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">LinkedIn</span>
           </a>
-          <a href="mailto:bhanudahal112a@gmail.com"  className={`aCssInLinkInHomePage  ${loaded ? 'link-animation' : ''}`}>
+          <a href="mailto:bhanudahal112a@gmail.com" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
             <img src={Gmail} alt="Email" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">Email</span>
           </a>
         </div>
-        <img src={scroll} className="absolute bottom-4 animate-bounce w-[80px]" alt='Scrolldown'></img>
+        {showScrollImage && (
+          <img src={scroll} className="absolute bottom-4 animate-bounce w-[80px]" alt="Scrolldown" />
+        )}
       </div>
     </div>
   );
-  
-  
 }
 
 export default InteractiveBackground;

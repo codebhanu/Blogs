@@ -93,7 +93,7 @@ function InteractiveBackground() {
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white">
       <Canvas className="absolute inset-0">
-        <Scene />
+        <Scene  />
       </Canvas>
       <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black ">
         <div className={`text-9xl mb-8 ${loaded ? 'name-animation' : ''}`}>Ben D</div>

@@ -27,7 +27,7 @@ function Dot({ dot, setElectricFlow }) {
 
   useFrame(() => {
     dot.position.add(dot.velocity);
-    if (dot.position.x > 5 || dot.position.x < -5) dot.velocity.x *= -1;
+    if (dot.position.x > 10 || dot.position.x < -10) dot.velocity.x *= -1;
     if (dot.position.y > 5 || dot.position.y < -5) dot.velocity.y *= -1;
     ref.current.position.copy(dot.position);
   });
@@ -107,12 +107,15 @@ function InteractiveBackground({ scrollContainerRef }) {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white">
-      <Canvas className="absolute inset-0">
-        <Scene />
+      <Canvas className=" absolute h-full w-full inset-0">
+        <Scene className='w-full h-full' />
       </Canvas>
       <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black">
         <div className={`text-9xl mb-8 ${loaded ? 'name-animation' : ''}`}>Ben D</div>
+      
         <div className="flex gap-4">
+
+          
           <a href="https://youtube.com" className={`aCssInLinkInHomePage ${loaded ? 'link-animation' : ''}`}>
             <img src={Youtube} alt="YouTube" className="imageSizeCssInHomePage" />
             <span className="nameSizeCssInHomePage">YouTube</span>

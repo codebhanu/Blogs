@@ -3,15 +3,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.custom-size {
-  @apply w-[32px] h-[32px] text-[32px] leading-none;
-}
+body{@apply font-sans}
 
-.custom-bg {
-  @apply bg-blue-500 text-white rounded p-4;
-}
 .aCssInLinkInHomePage{
-    @apply  flex items-center bg-blue-500 hover:bg-sky-700 text-white rounded p-2 
+    @apply  flex items-center bg-blue-500 hover:bg-sky-700 text-white rounded p-2 sm:text-left
 }
 .imageSizeCssInHomePage{
     @apply w-[30px] h-[30px] mr-2
@@ -54,4 +49,8 @@
     animation: fadeIn 1s ease-out forwards;
     animation-delay: var(--delay, 0.5s);
     opacity: 0;
+  }
+
+  .hover-move-right:hover img {
+    transform: translateX(10px);
   }

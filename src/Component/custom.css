@@ -51,6 +51,4 @@ body{@apply font-sans}
     opacity: 0;
   }
 
-  .hover-move-right:hover img {
-    transform: translateX(10px);
-  }
+  

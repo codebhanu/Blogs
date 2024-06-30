@@ -3,7 +3,16 @@ import { useParams } from 'react-router-dom'
 const Blog = (props) => {
   const {id} =useParams()
   return (
-    <div>This is blog no {id}
+    <div className=''>
+       
+       <div>
+        <h1>How to center a div</h1>
+
+
+
+
+       </div>
+          
     
       </div>
   )

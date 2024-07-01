@@ -5,13 +5,14 @@ import './style.css';
 import './Component/custom.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import Blogs from './Component/Blogs';
+import NavButton from '/Users/bhanudahal/blog/blogben/src/Component/NavButton.js';
+import Blog from './Component/Blog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-     <App></App>
+   <App/>
     </Router>
   </React.StrictMode>
 );

@@ -85,7 +85,7 @@ const blogPosts = [
       },
       {
         id: 15,
-        title: 'Exploring the Depths of the Ocean',
+        title: '15',
         date: '2024-07-01',
         // eslint-disable-next-line no-multi-str
         content: "Exploring the depths of the ocean has long been a pursuit that captivates scientists and adventurers alike. The ocean, which covers more than 70% of the Earth’s surface, remains one of the least explored frontiers on our planet. With advancements in technology, we are now able to delve deeper into the ocean than ever before, uncovering its mysteries and gaining a better understanding of its vast ecosystems. One of the most significant technological advancements in ocean exploration is the development of remotely operated vehicles (ROVs) and autonomous underwater vehicles (AUVs). These robotic systems can withstand the extreme pressures of the deep sea and are equipped with cameras, sensors, and sampling devices. ROVs and AUVs allow scientists to explore the ocean floor, observe marine life, and collect data and samples without the need for human divers. This technology has led to the discovery of previously unknown species, underwater volcanoes, and hydrothermal vents, which are teeming with unique life forms. Another critical area of ocean exploration is the study of marine biodiversity. The ocean is home to an incredible array of life, from microscopic plankton to the largest animal on Earth, the blue whale. Marine biologists use various methods to study these organisms, including DNA sequencing, acoustic monitoring, and underwater photography. Understanding marine biodiversity is essential for conservation efforts and helps us comprehend the complex interactions within marine ecosystems. The exploration of the ocean also plays a crucial role in climate science. The ocean is a significant component of the Earth’s climate system, influencing weather \n\
@@ -114,6 +114,266 @@ const blogPosts = [
     blockchain's decentralized and secure nature makes it ideal for various 
     applications, including supply chain management, digital identity verification, 
     and secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
+    advancements in this field are paramount. Quantum computing holds the potential 
+    to revolutionize encryption and data security, providing solutions that are 
+    currently unattainable with classical computers. In the realm of sustainable 
+    technology, innovations aimed at addressing environmental challenges are gaining 
+    momentum. Renewable energy sources, energy-efficient devices, and sustainable 
+    manufacturing practices are becoming more critical as the world grapples with 
+    climate change. Additionally, advancements in biotechnology, such as gene 
+    editing and personalized medicine, promise to transform healthcare by offering 
+    more effective treatments and preventive measures. In conclusion, the future of 
+    technology is characterized by rapid advancements that will continue to reshape 
+    our world. Embracing these changes and staying informed about emerging trends 
+    will be crucial for individuals and businesses alike to thrive in the 
+    tech-driven future.nd secure voting systems. As cybersecurity threats become more sophisticated, 
     advancements in this field are paramount. Quantum computing holds the potential 
     to revolutionize encryption and data security, providing solutions that are 
     currently unattainable with classical computers. In the realm of sustainable 

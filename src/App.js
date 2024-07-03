@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import About from './Component/About';
 import Vote from './Component/Vote';
 import Blogs from './Component/Blogs';

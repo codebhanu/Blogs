@@ -5,8 +5,7 @@ import './style.css';
 import './Component/custom.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import NavButton from '/Users/bhanudahal/blog/blogben/src/Component/NavButton.js';
-import Blog from './Component/Blog';
+import NavButton from './Component/NavButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -12,25 +12,24 @@ const Blog = (props) => {
  
   return (
     <>
-    <div className=' bg-gray-300 overflow-scroll' >
+    <div className='   h-screen overflow-auto bg-white ' >
+
+
     <NavButton />
-    <div className=' flex items-center justify-center '>
-     
-       
+     <div className='w-screen flex items-center justify-center overflow-auto '>
+
        <div className=' flex flex-col w-[600px] mt-20 '>
 
-        <h1 className='text-center font-bold text-black text-3xl'>{blogPost.title}</h1>
+        <h1 className='text-center font-bold  text-black text-3xl'>{blogPost.title}</h1>
         <p className='text-gray-400 text-sm font-semibold' >{blogPost.date}</p>
         <p className='text-center font-semibold text-black'>{blogPost.content}</p>
 
-
-
-
-       </div>
-          
-    
+        </div>
       </div>
-      </div>
+
+
+
+    </div>
       </>
   )
 }

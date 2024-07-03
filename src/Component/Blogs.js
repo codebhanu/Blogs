@@ -21,7 +21,11 @@ const Blogs = () => {
 
   },[page])
 
-  const totalPages= Math.round(blogPosts.length / numberPostPerPage)
+  let totalPages= Math.round(blogPosts.length / numberPostPerPage)
+
+  if(blogPosts.length%numberPostPerPage>0||blogPosts.length%numberPostPerPage<=4){
+    totalPages+=1
+  }
 
   const indexOfLastPost=currentPage*numberPostPerPage
   const indexOfFirstPost =indexOfLastPost-numberPostPerPage
@@ -42,17 +46,48 @@ const Blogs = () => {
 
 
   return (
+    
 
-    <div className='bg-red-600 flex justify-center items-center flex-col overflow-scroll space-x-3'>
-     <NavButton/>
-    <div className="  flex justify-center items-center flex-col  p-4">
-      {currentPosts.map((blogPost) => (
-        <BlogPost key={blogPost.id} blogPost={blogPost} />
-      ))}
+
+    <div className='relative w-screen min-h-screen justify-center bg-pink-50 flex flex-col '>
+         
+         <div className='bg-white flex flex-row justify-between ' >
+          <div>
+          <NavButton url={'/'} title={'Home'}/>
+          </div>
+          <div className='flex flex-row'>
+            <NavButton url={'/Blogs/page/1'} title={'Blogs'}/>
+            <NavButton url={'/about'} title={'About'}/>
+            <NavButton url={'/project'} title={'Projects'}/>
+
+          </div>
+          </div>
+         
+        <div className='flex-grow flex items-center justify-center flex-col mb-24'>
+          {currentPosts.map((blogPost) => (
+            <BlogPost key={blogPost.id} blogPost={blogPost} />
+          ))}
+        </div>
+
+        <div className='w-full absolute bottom-7 flex justify-center items-center ' >
+          <Pagination totalPages={totalPages} paginate={paginate} currentPage={currentPage} />
+        </div>
+      </div>
+
+   
+       
       
-    </div>
-    <Pagination className='' totalPages={totalPages} paginate={paginate} currentPage={currentPage} />
-    </div>
+
+
+
+
+     
+
+  
+    
+  
+    
+   
   );
 };
 
@@ -68,9 +103,9 @@ const BlogPost = ({ blogPost }) => {
           isOverflowing ? 'bg-gradient-to-b from-transparent to-white' : ''
         }`}
       >
-        <h1 className="font-bold text-xl mb-2">{blogPost.title}</h1>
+        <h1 className="font-bold text-xl mb-2 text-black">{blogPost.title}</h1>
         <p className="text-sm text-gray-600 mb-4">{blogPost.date}</p>
-        <p className="mb-4">{blogPost.content}</p>
+        <p className="mb-4 text-black">{blogPost.content}</p>
         {isOverflowing && (
           <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
           
@@ -78,9 +113,9 @@ const BlogPost = ({ blogPost }) => {
         
         
       </div>
-      {isOverflowing &&( <Link to={`/blogs/${blogPost.id}`} className="absolute bottom-3  text-blue-500 hover:underline font-bold  ">
+       <Link to={`/blogs/${blogPost.id}`} className="absolute bottom-3  text-blue-500 hover:underline font-bold  ">
           Read More
-        </Link>)}
+        </Link>
       
     </div>
   );
@@ -93,11 +128,11 @@ const Pagination =({totalPages,paginate,currentPage})=>{
   }
   return (
     <nav>
-      <div className='felx flex-row justify-center  bg-blue-700 w-[300px]  text-white '>
+      <div className='felx flex-row   text-white content-between '>
         {pageNumbers.map(number=>(
           
           
-          <button key={number} onClick={()=>paginate(number)}  className={`px-3 p-x-1 border rounded ${number===currentPage? 'bg-blue-500 text-white':''} `}>{number}</button>
+          <button key={number} onClick={()=>paginate(number)}  className={`px-3 p-x-1   border rounded ${number===currentPage? 'bg-blue-500 text-white':'bg-red-500'} `}>{number}</button>
         
         
         ))}

@@ -176,7 +176,8 @@ return (
     </Link>
   </div>
 
-  <div className="h-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden">
+ <div className=" relative h-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden">
+
   <div className="flex relative justify-center items-center flex-col bg-white mt-10 max-w-3xl p-6 rounded-lg shadow-2xl w-[900px] h-[600px]">
     
       <div className="relative p-2 flex flex-col w-full h-full overflow-hidden bg-gradient-to-b from-transparent to-white">
@@ -187,10 +188,16 @@ return (
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
         
       </div>
+
       <Link to={`/blogs/${blogPosts[0].id}`} className="absolute bottom-3 text-blue-500 hover:underline">
         Read More
       </Link>
+
     </div>
+    
+    <Link  to={'/Blogs/page/1'} className='absolute bottom-2 ' >
+    <Button title='More Posts'/>
+    </Link>
   </div>
 </div>
 </div>

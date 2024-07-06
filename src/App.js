@@ -6,6 +6,7 @@ import Blogs from './Component/Blogs';
 import Blog from './Component/Blog';
 import NotFoundPage from './Component/NotFoundPage';
 import Home from './Component/Home';
+import NavButtons from './Component/NavButtons';
 const App = () => {
  
 
@@ -14,9 +15,10 @@ const App = () => {
   
          
     <Routes>
-      <Route path ='/' element ={<Home />}/>
 
-      <Route ></Route>
+      <Route path='/'  element ={<Home />}/>
+
+      <Route  element={<NavButtons/>}  >
       <Route path ='/Vote' element={<Vote/>}/>
 
     <Route path ='/About' element={<About/>}/>
@@ -26,6 +28,8 @@ const App = () => {
     <Route path ='/blogs/:id' element={<Blog/>}/>
     
     <Route path ='*'element={<NotFoundPage/>}/>
+    
+    </Route>
   </Routes>
        
       

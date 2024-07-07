@@ -7,8 +7,11 @@ const NavButton = (props) => {
 
 
 <div>
- <button  onClick={props.onClick}  className={` text-blue-500 text-3xl hover:bg-blue-600 hover:text-white p-4 ${props.isActive?'bg-green-600 text-white hover:bg-green-700' :''} `}
- ><Link to={props.url}>{props.title}</Link></button>
+ 
+  <Link  to={props.url}> <button  onClick={props.onClick}  className={` text-blue-500 text-3xl hover:bg-blue-600 hover:text-white p-4 ${props.isActive?'bg-green-600 text-white hover:bg-green-700' :''} `}>
+  {props.title} </button>  </Link> 
+  
+  
 
 </div>
 

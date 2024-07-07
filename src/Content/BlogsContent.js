@@ -390,5 +390,5 @@ const blogPosts = [
       },
     // Add more blog posts here...
   ];
-
+  
   export default blogPosts

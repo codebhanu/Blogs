@@ -17,38 +17,24 @@ body{@apply font-sans}
 
 }
 
-@keyframes slideInCenterFast {
-    0% {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+.navLinkFadeAnimation a:nth-child(1):hover {
   
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
+}
 
-    }
-    50%{
-        opacity:0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .name-animation {
-    animation: slideInCenterFast 0.5s ease-out forwards;
-  }
-  
-  .link-animation {
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: var(--delay, 0.5s);
-    opacity: 0;
-  }
+.navLinkFadeAnimation a:nth-child(2):hover {
 
-  
+}
+.navLinkFadeAnimation a:nth-child(3):hover {
+
+}
+.navLinkFadeAnimation a:nth-child(4):hover {
+
+}
+.navLinkFadeAnimation a:nth-child(5):hover {
+
+}
+.navLinkFadeAnimation a:nth-child(6):hover {
+
+}
+
+

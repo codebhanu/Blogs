@@ -17,7 +17,7 @@ import { useState,useEffect } from "react";
         }
     },[])
     return (
-        <div className="sticky top-0 w-full h-1 bg-blue-300  z-10">
+        <div className="sticky top-0 w-full h-1 bg-blue-400  z-10">
             <div className="h-full bg-blue-500 transition-all duration-100"
             style={{width:`${ScrollRatio*100}%`}}></div>
 

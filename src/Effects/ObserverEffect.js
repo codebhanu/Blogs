@@ -1,8 +1,7 @@
- import "/Users/bhanudahal/blog/blogben/src/App.css";
 
 import { useState, useRef, useEffect } from "react";
 
-function Test() {
+function ObserverEffect() {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef(null);
 
@@ -30,7 +29,7 @@ function Test() {
       });
     }
   }, [isIntersecting]);
-
+/* 
   return (
     <div className="App">
       <header>This is the Header</header>
@@ -40,7 +39,7 @@ function Test() {
       </main>
       <footer>This is the Footer</footer>
     </div>
-  );
+  ); */
 }
 
-export default Test; 
+export default ObserverEffect; 

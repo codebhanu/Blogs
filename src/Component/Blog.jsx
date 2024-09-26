@@ -2,7 +2,6 @@ import React from "react";
 import blogPosts from "../Content/BlogsContent";
 import { useParams } from "react-router-dom";
 
-
 const Blog = (props) => {
   const { id } = useParams();
   const blogPost = blogPosts.find((post) => post.id === Number(id));
@@ -13,8 +12,6 @@ const Blog = (props) => {
   return (
     <>
       <div className="w-screen min-h-screen  bg-white ">
-        
-
         <div className="w-screen flex items-center justify-center overflow-auto ">
           <div className=" flex flex-col w-[600px] mt-20 ">
             <h1 className="text-center font-bold  text-black text-3xl">

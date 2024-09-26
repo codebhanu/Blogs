@@ -7,40 +7,48 @@ import Twitter from "/Users/bhanudahal/blog/blogben/src/icons/Twitter.svg";
 import Insta from "/Users/bhanudahal/blog/blogben/src/icons/Insta.svg";
 import Youtube from "/Users/bhanudahal/blog/blogben/src/icons/Youtube.svg";
 import scroll from "/Users/bhanudahal/blog/blogben/src/icons/scroll.svg";
-import Button from "/Users/bhanudahal/blog/blogben/src/Component/button.js";
-import blogPosts from "/Users/bhanudahal/blog/blogben/src/Content/BlogsContent.js";
+import Button from "/Users/bhanudahal/blog/blogben/src/Component/button.jsx";
+import blogPosts from "/Users/bhanudahal/blog/blogben/src/Content/BlogsContent.jsx";
+/* import { Canvas } from "@react-three/fiber";
+import Scene from "./Scene"; */
 
 function Test() {
   const [showScrollImage, setShowScrollImage] = useState(true);
   const scrollContainerRef = useRef(null);
-  const observer = useRef(null);
 
   useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-          
-            entry.target.classList.add("show");
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
+    function addObservation(classNametoSeach, addClass) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(addClass);
+            } else if (!entry.isIntersecting) {
+              entry.target.classList.remove("show");
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
 
-    const elements = document.querySelectorAll(".hide");
-    elements.forEach((element) => {
-      observer.current.observe(element);
-      
-    });
+      const element = document.querySelectorAll(classNametoSeach);
+      element.forEach((element) => {
+        observer.observe(element);
+      });
 
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
+      return () => {
+        if (observer) {
+          observer.disconnect();
+        }
+      };
+    }
+
+    addObservation(".hide", "show");
+    addObservation(".animateSlideBack", "animate-slide-in-bck-top-forname");
+    addObservation(".slideinforward", "animate-slide-in-fwd-center");
+    addObservation(".nameOfNavlink", "animate-bounce-top");
+    addObservation(".blogNamePop", "animate-slide-in-bck-top");
+    addObservation(".buttonForReadmore", "scale-in-center");
   }, []);
 
   useEffect(() => {
@@ -103,23 +111,26 @@ function Test() {
   ];
 
   return (
-    <div className="h-screen w-screen overflow-hidden antialiased">
+    <div className="h-screen w-screen overflow-hidden antialiased ">
       <div
         ref={scrollContainerRef}
         id="lazyLoading"
         className="h-full overflow-auto"
       >
         <div className="hide relative w-screen h-screen bg-white">
-          <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black">
-            <div className="hide mb-11 text-6xl sm:text-8xl md:text-9xl font-semibold">
+          {/* <Canvas className="absolute h-full w-full inset-0">
+            <Scene className="w-full h-full" />
+          </Canvas> */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black perspective-3d ">
+            <div className="hide mb-11 text-6xl sm:text-8xl md:text-9xl font-semibold animateSlideBack">
               Ben D
             </div>
-            <div className="navLinkFadeAnimation flex flex-wrap justify-center items-center gap-4">
+            <div className="navLinkFadeAnimation flex flex-wrap justify-center items-center nameOfNavlink gap-4">
               {socialLink.map((socialLink) => (
                 <a
                   key={socialLink.link}
                   href={socialLink.link}
-                  className="aCssInLinkInHomePage hide"
+                  className="aCssInLinkInHomePage hide  nameOfNavlink"
                 >
                   <img
                     src={socialLink.src}
@@ -157,17 +168,19 @@ function Test() {
               computer when I was in 7th class.
             </p>
           </div>
-          <Link to="/about">
-            <Button title="Read more" className="mt-6" />
-          </Link>
+          <div className="hide  buttonForReadmore">
+            <Link to="/about">
+              <Button title="Read more" className="mt-6" />
+            </Link>
+          </div>
         </div>
 
-        <div className="hide h-screen w-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden">
-          <p className="hide text-black text-6xl sm:text-6xl md:text-7xl lg:text-8xl mb-6">
+        <div className="hide h-screen w-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden perspective-3d ">
+          <p className="hide text-black text-6xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 blogNamePop ">
             Blog
           </p>
 
-          <div className="flex relative justify-center items-center flex-col bg-white w-11/12 sm:p-4 rounded-lg shadow-2xl h-2/3 sm:w-4/5 md:w-3/5 lg:w-4/5 xl:w-1/2 lg:p-8 md:p-6 p-3 break-word mb-4">
+          <div className="flex relative justify-center items-center flex-col bg-white w-11/12 sm:p-4 rounded-lg shadow-2xl h-2/3 sm:w-4/5 md:w-3/5 lg:w-4/5 xl:w-1/2 lg:p-8 md:p-6 p-3 break-word mb-4 slideinforward  ">
             <div className="relative p-2 flex flex-col w-full h-full overflow-hidden bg-gradient-to-b from-transparent text to-white">
               <h2 className="font-bold text-3xl mb-2">
                 {blogPosts[blogPosts.length - 1].title}
@@ -187,7 +200,7 @@ function Test() {
               Read More
             </Link>
           </div>
-          <Link to={"/Blogs/page/1"}>
+          <Link to={"/Blogs/page/1"} className="buttonForReadmore">
             <Button title="More Posts" />
           </Link>
           <p className="fixed bottom-0 font-sans text-sm">

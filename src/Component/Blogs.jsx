@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import useIsOverflowing from "/Users/bhanudahal/blog/blogben/src/Component/useIsOverflowing.js";
+import useIsOverflowing from "./useIsOverflowing.jsx";
 
 import blogPosts from "../Content/BlogsContent";
 
@@ -42,8 +42,6 @@ const Blogs = () => {
 
   return (
     <div className="relative w-screen min-h-screen justify-center bg-pink-50 flex flex-col ">
-      
-
       <div className="flex-grow flex items-center justify-center flex-col mb-24">
         {currentPosts.map((blogPost) => (
           <BlogPost key={blogPost.id} blogPost={blogPost} />

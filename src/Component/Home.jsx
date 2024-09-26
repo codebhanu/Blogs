@@ -7,8 +7,8 @@ import Twitter from "/Users/bhanudahal/blog/blogben/src/icons/Twitter.svg";
 import Insta from "/Users/bhanudahal/blog/blogben/src/icons/Insta.svg";
 import Youtube from "/Users/bhanudahal/blog/blogben/src/icons/Youtube.svg";
 import scroll from "/Users/bhanudahal/blog/blogben/src/icons/scroll.svg";
-import Button from "/Users/bhanudahal/blog/blogben/src/Component/button.js";
-import blogPosts from "/Users/bhanudahal/blog/blogben/src/Content/BlogsContent.js";
+import Button from "./button.jsx";
+import blogPosts from "../Content/BlogsContent.jsx";
 import { Canvas } from "@react-three/fiber";
 import Scene from "./Scene";
 
@@ -28,7 +28,7 @@ function Home() {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     const elements = document.querySelectorAll(".hide");
@@ -165,7 +165,7 @@ function Home() {
           </Link>
         </div>
 
-        <div className="hide h-screen w-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden">
+        <div className="relative hide h-screen w-screen bg-slate-100 flex flex-col items-center justify-center overflow-hidden">
           <p className="hide text-black text-6xl sm:text-6xl md:text-7xl lg:text-8xl mb-6">
             Blog
           </p>
@@ -193,8 +193,9 @@ function Home() {
           <Link to={"/Blogs/page/1"}>
             <Button title="More Posts" />
           </Link>
-          <p className="fixed bottom-0 font-sans text-sm">
-            bhanudddd all rights reserved
+
+          <p className="absolute bottom-0 font-sans text-sm">
+            this is the practie di bhanudddd all rights reserved
           </p>
         </div>
       </div>

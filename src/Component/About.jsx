@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const About = () => {
   const elementsRef = useRef([]);
@@ -7,15 +7,12 @@ const About = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+          entry.target.classList.add("show");
         } else {
-          entry.target.classList.remove('show');
+          entry.target.classList.remove("show");
         }
       });
     });
-
-
-    
 
     elementsRef.current.forEach((el) => {
       if (el) {
@@ -35,7 +32,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className='bg-slate-600 min-h-screen flex flex-col justify-center items-center text-white font-bold'>
+    <div className="bg-slate-600 min-h-screen flex flex-col justify-center items-center text-white font-bold">
       {Array.from({ length: 50 }, (_, i) => (
         <p
           key={i}
@@ -44,7 +41,8 @@ const About = () => {
             elementsRef.current[i] = el;
           }}
         >
-          This is some scrollable content. Scroll down to see the sticky div change color.
+          This is some scrollable content. Scroll down to see the sticky div
+          change color.
         </p>
       ))}
     </div>

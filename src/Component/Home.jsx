@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Gmail from "/Users/bhanudahal/blog/blogben/src/icons/Gmail.svg";
-import Linkd from "/Users/bhanudahal/blog/blogben/src/icons/Linkd.svg";
-import Github from "/Users/bhanudahal/blog/blogben/src/icons/Github.svg";
-import Twitter from "/Users/bhanudahal/blog/blogben/src/icons/Twitter.svg";
-import Insta from "/Users/bhanudahal/blog/blogben/src/icons/Insta.svg";
-import Youtube from "/Users/bhanudahal/blog/blogben/src/icons/Youtube.svg";
-import scroll from "/Users/bhanudahal/blog/blogben/src/icons/scroll.svg";
+import Gmail from "../icons/Gmail.svg";
+import Linkd from "../icons/Linkd.svg";
+import Github from "../icons/Github.svg";
+import Twitter from "../icons/Twitter.svg";
+import Insta from "../icons/Insta.svg";
+import Youtube from "../icons/Youtube.svg";
+import scroll from "../icons/scroll.svg";
 import Button from "./button.jsx";
 import blogPosts from "../Content/BlogsContent.jsx";
 import { Canvas } from "@react-three/fiber";
@@ -16,7 +16,6 @@ function Home() {
   const [showScrollImage, setShowScrollImage] = useState(true);
   const scrollContainerRef = useRef(null);
   const observer = useRef(null);
-
   useEffect(() => {
     observer.current = new IntersectionObserver(
       (entries) => {

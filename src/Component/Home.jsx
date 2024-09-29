@@ -114,7 +114,7 @@ function Home() {
           </Canvas>
           <div className="absolute inset-0 flex flex-col items-center justify-center font-bold text-black">
             <div className="hide mb-11 text-6xl sm:text-8xl md:text-9xl font-semibold">
-              Ben D
+              Ben dahal
             </div>
             <div className="navLinkFadeAnimation flex flex-wrap justify-center items-center gap-4">
               {socialLink.map((socialLink) => (

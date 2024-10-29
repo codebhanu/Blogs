@@ -27,11 +27,10 @@ const About = () => {
             />
 
             <div>
-              <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
+              <p className="grid-headtext">Hi, I’m Ben </p>
               <p className="grid-subtext">
-                With 12 years of experience, I have honed my skills in both
-                frontend and backend dev, creating dynamic and responsive
-                websites.
+                I am recent graduate from sault college toronto campus and
+                actively seeking entry level webdevlopment oppertunity
               </p>
             </div>
           </div>

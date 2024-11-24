@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,7 @@
 .App {
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: white;
   font-family: "Edu NSW ACT Foundation", cursive;
 }
 
@@ -35,7 +33,9 @@ footer {
 }
 
 main {
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3), -3px -5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    3px 5px 5px rgba(0, 0, 0, 0.3),
+    -3px -5px 5px rgba(0, 0, 0, 0.3);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -69,3 +69,4 @@ main div:last-child {
   transform: translateX(0) !important;
   opacity: 1 !important;
 }
+

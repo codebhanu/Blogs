@@ -23,11 +23,11 @@ const App = () => {
         element={
           <main className="max-w-7xl mx-auto relative">
             <Navbar />
+            <WorkExperience />
             <Hero />
             <About />
             <Projects />
             <Clients />
-            <WorkExperience />
             <Contact />
             <Footer />
           </main>

@@ -108,19 +108,18 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={Math.PI} />
-            <directionalLight position={[10, 10, 5]} />
-            <Center>
-              <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
-              </Suspense>
-            </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-          </Canvas>
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full flex items-center justify-center">
+          <div className="w-full h-full bg-black-600 flex justify-center items-center rounded-lg">
+            <iframe
+              width="560" // You can specify a fixed width here if preferred
+              height="315" // Fixed height for videos
+              src={currentProject.url}
+              title="Project Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </section>

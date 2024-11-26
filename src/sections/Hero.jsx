@@ -1,75 +1,138 @@
-import { Leva } from "leva";
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { useMediaQuery } from "react-responsive";
-import { PerspectiveCamera } from "@react-three/drei";
+import React, { useState } from "react";
+import Modal from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
 
-import Cube from "../components/Cube.jsx";
-import Rings from "../components/Rings.jsx";
-import ReactLogo from "../components/ReactLogo.jsx";
-import Button from "../components/Button.jsx";
-import Target from "../components/Target.jsx";
-import CanvasLoader from "../components/Loading.jsx";
-import HeroCamera from "../components/HeroCamera.jsx";
-import { calculateSizes } from "../constants/index.js";
-import { HackerRoom } from "../components/HackerRoom.jsx";
+// Gallery Items with Title and Description
+const galleryItems = [
+  {
+    type: "image",
+    src: "/assests/blenderChairs.png",
+    alt: "Artwork 1",
+    title: "Sunset Painting",
+    description: "A vibrant depiction of a sunset over a tranquil sea.",
+  },
+  {
+    type: "video",
+    src: " https://www.youtube.com/embed/Hf1fLYKNLxI ",
+    title: "Trivia shorts for children ",
+    description: "I used canva and eleven labs to make this shorts",
+  },
+  {
+    type: "image",
+    src: "/path/to/image2.jpg",
+    alt: "Artwork 2",
+    title: "Abstract Design",
+    description: "A modern abstract piece exploring geometric patterns.",
+  },
+  {
+    type: "video",
+    src: "https://www.youtube.com/embed/video_id2",
+    title: "Motion Graphics Demo",
+    description:
+      "A collection of motion graphics projects created in After Effects.",
+  },
+];
 
 const Hero = () => {
-  // Use media queries to determine screen size
-  const isSmall = useMediaQuery({ maxWidth: 440 });
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+  const [open, setOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  const sizes = calculateSizes(isSmall, isMobile, isTablet);
+  const openModal = (item) => {
+    setSelectedItem(item);
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+    setSelectedItem(null);
+  };
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+    <section
+      className="min-h-screen w-full flex flex-col items-center relative"
+      id="home"
+    >
+      {/* Title */}
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Ben <span className="waving-hand">👋</span>
+          Notable Graphic Designs & Artwork
         </p>
         <p className="hero_tag text-gray_gradient">
-          Building Products & Brands
+          A showcase of creativity and innovation
         </p>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
-        <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
-            <Leva hidden />
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-
-            <HeroCamera isMobile={isMobile}>
-              <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
+      {/* Gallery */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-4">
+        {galleryItems.map((item, index) => (
+          <div
+            key={index}
+            className="relative gallery-item"
+            onClick={() => openModal(item)}
+            style={{
+              animation: `fadeIn 0.5s ease-in-out ${index * 0.2}s forwards`,
+              opacity: 0,
+            }}
+          >
+            {/* Media */}
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-auto object-cover rounded-md cursor-pointer hover:scale-105 transition transform duration-300"
               />
-            </HeroCamera>
+            ) : (
+              <iframe
+                src={item.src}
+                title={item.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-auto rounded-md cursor-pointer hover:scale-105 transition transform duration-300"
+              ></iframe>
+            )}
 
-            <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
-              <Rings position={sizes.ringPosition} />
-              <Cube position={sizes.cubePosition} />
-            </group>
-
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
-          </Suspense>
-        </Canvas>
+            {/* Title and Description */}
+            <div className="mt-2 text-center">
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-gray-400">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button
-            name="Let's work together"
-            isBeam
-            containerClass="sm:w-fit w-full sm:min-w-96"
-          />
-        </a>
-      </div>
+      {/* Modal */}
+      {selectedItem && (
+        <Modal open={open} onClose={closeModal} center>
+          <div className="modal-container">
+            {/* Media */}
+            {selectedItem.type === "image" ? (
+              <img
+                src={selectedItem.src}
+                alt={selectedItem.alt}
+                className="w-full h-auto object-contain"
+              />
+            ) : (
+              <iframe
+                src={selectedItem.src}
+                title={selectedItem.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-80"
+              ></iframe>
+            )}
+
+            {/* Title and Description */}
+            <div className="mt-4 text-center">
+              <h3 className="text-xl font-bold">{selectedItem.title}</h3>
+              <p className="text-md text-gray-500">
+                {selectedItem.description}
+              </p>
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };

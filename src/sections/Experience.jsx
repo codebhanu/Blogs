@@ -4,18 +4,26 @@ import { OrbitControls } from "@react-three/drei";
 
 import Developer from "../components/Developer.jsx";
 import CanvasLoader from "../components/Loading.jsx";
-import { workExperiences } from "../constants/index.js";
 
 const WorkExperience = () => {
-  const [animationName, setAnimationName] = useState("idle");
+  const [animationName, setAnimationName] = useState("salute");
 
+  const words = ["developer", "YouTuber", "freelancer"];
+  let index = 0;
+
+  function changeWord() {
+    const dynamicWord = document.getElementById("dynamic-word");
+    dynamicWord.textContent = words[index];
+    index = (index + 1) % words.length; // Cycle through the array
+  }
+
+  // Change the word every 2 seconds
+  setInterval(changeWord, 2000);
   return (
     <section className="c-space my-20" id="work">
-      <div className="w-full text-white-600">
-        <p className="head-text">My Work Experience</p>
-
+      <div className="w-full text-black-600">
         <div className="work-container">
-          <div className="work-canvas">
+          <div className="work-canvas flex flex-col h-full justify-start items-center py-2">
             <Canvas>
               <ambientLight intensity={7} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -31,38 +39,41 @@ const WorkExperience = () => {
               </Suspense>
             </Canvas>
           </div>
-
-          <div className="work-content">
-            <div className="sm:py-10 py-5 sm:px-5 px-2.5">
-              {workExperiences.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOver={() =>
-                    setAnimationName(item.animation.toLowerCase())
-                  }
-                  onPointerOut={() => setAnimationName("idle")}
-                  className="work-content_container group"
+          <div
+            onPointerOver={() => setAnimationName("salute")}
+            onPointerOut={() => setAnimationName("idle")}
+            class="work-content"
+          >
+            <div class="work-content_container flex flex-col h-full justify-start items-center py-2 group">
+              <div class="work-content_text">
+                <h1 className=" font-style: italic font-bold text-[100px] mb-2">
+                  {" "}
+                  Hi! I am Ben{" "}
+                </h1>
+                <span
+                  id="dynamic-word"
+                  class=" font-style: italic text-green-400 text-[50px] font-bold"
                 >
-                  <div className="flex flex-col h-full justify-start items-center py-2">
-                    <div className="work-content_logo">
-                      <img className="w-full h-full" src={item.icon} alt="" />
-                    </div>
+                  developer
+                </span>
 
-                    <div className="work-content_bar" />
-                  </div>
-
-                  <div className="sm:p-5 px-2.5 py-5">
-                    <p className="font-bold text-white-800">{item.name}</p>
-                    <p className="text-sm mb-5">
-                      {item.pos} -- <span>{item.duration}</span>
-                    </p>
-                    <p className="group-hover:text-white transition-all ease-in-out duration-500">
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                <p class="text-white-400   sm:text-xl">
+                  <span className="mt-3 block text-[25px]">
+                    I am a passionate web developer with a love for
+                    problem-solving. My drive to find solutions for everything,
+                    no matter how long it takes, is fueled by my desire to make
+                    things more efficient and easier. Maybe my laziness plays a
+                    part in this, as it constantly pushes me to automate and
+                    simplify tasks in creative ways. I’ve been using computers
+                    since I was in 7th grade, and my favorite part of computer
+                    science has always been algorithms. The intersection of math
+                    and technology fascinates me, whether it’s translating
+                    algorithms into vector images or building neural networks.
+                    To me, everything is math, and I love exploring how
+                    mathematical concepts can bring ideas to life through code.
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

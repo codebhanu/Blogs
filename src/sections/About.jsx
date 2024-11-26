@@ -82,7 +82,7 @@ const About = () => {
                 I’m very flexible with time zone communications & locations
               </p>
               <p className="grid-subtext">
-                I&apos;m based in Rjieka, Croatia and open to remote work
+                I&apos;m based in Toronto, Canada and open to remote work
                 worldwide.
               </p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
@@ -125,7 +125,7 @@ const About = () => {
                   alt="copy"
                 />
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
-                  adrian@jsmastery.pro
+                  ben.dahal007@gmail.com{" "}
                 </p>
               </div>
             </div>

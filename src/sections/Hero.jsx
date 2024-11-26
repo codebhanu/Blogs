@@ -5,11 +5,11 @@ import "react-responsive-modal/styles.css";
 // Gallery Items with Title and Description
 const galleryItems = [
   {
-    type: "image",
-    src: "/assests/blenderChairs.png",
+    type: "video",
+    src: " https://www.youtube.com/embed/MwIFIZRzBm8 ",
     alt: "Artwork 1",
-    title: "Sunset Painting",
-    description: "A vibrant depiction of a sunset over a tranquil sea.",
+    title: "pubg mobile game play",
+    description: "Game play edit using different edting tools",
   },
   {
     type: "video",
@@ -18,16 +18,15 @@ const galleryItems = [
     description: "I used canva and eleven labs to make this shorts",
   },
   {
-    type: "image",
-    src: "/path/to/image2.jpg",
-    alt: "Artwork 2",
-    title: "Abstract Design",
-    description: "A modern abstract piece exploring geometric patterns.",
+    type: "video",
+    src: " https://www.youtube.com/embed/Pi_VdikyRdE",
+    title: "How to fix blank page problem",
+    description: "Fixing blank page problem in google  docs",
   },
   {
     type: "video",
-    src: "https://www.youtube.com/embed/video_id2",
-    title: "Motion Graphics Demo",
+    src: "  https://www.youtube.com/embed/BaW0T3QfiCg",
+    title: "Bribery educational video",
     description:
       "A collection of motion graphics projects created in After Effects.",
   },

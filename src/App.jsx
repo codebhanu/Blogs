@@ -1,4 +1,5 @@
 import React from "react";
+import BlogpostFront from "./components/BlogpostFront.jsx";
 import { Routes, Route } from "react-router-dom";
 import Hero from "./sections/Hero.jsx";
 import About from "./sections/About.jsx";
@@ -28,6 +29,7 @@ const App = () => {
             <About />
             <Projects />
             <Clients />
+            <BlogpostFront />
             <Contact />
             <Footer />
           </main>
